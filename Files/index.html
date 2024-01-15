@@ -1,111 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product | GSB</title>
-    <link rel="stylesheet" href="./style.css">
+    <Style>
+        body {
+            background-color: rgb(255, 247, 237);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(234, 0, 255);
+
+        }
+
+        input {
+            padding: 8px;
+            outline: none;
+            margin: 10px auto;
+            display: block;
+            width: 200px;
+            border: 1px solid rgb(245, 132, 255);
+            background-color: rgb(255, 250, 244);
+        }
+
+        textarea {
+            margin: 10px auto;
+            outline: none;
+            padding: 5px;
+            display: block;
+            border: 1px solid rgb(245, 132, 255);
+        }
+
+        button {
+            border: 1px solid rgb(245, 132, 255);
+            padding: 8px;
+            display: block;
+            margin: 5px auto;
+            background-color: rgb(235, 218, 255);
+            /* color: white; */
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(210, 171, 255);
+
+        }
+    </Style>
 </head>
+
 <body>
     <h1>Add product Page with backend</h1>
-    <br><br><br><hr><br><hr>
+    <hr>
     <form action="/" method="post">
-        <input name="Title" type="text" placeholder="Title" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus>
-        <input name="Store_Name" type="text" placeholder="Store Name" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="MRP" type="text" placeholder="MRP" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Selling" type="text" placeholder="Selling" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <center>
+            <h3>MAIN SECTION</h3>
+        </center>
+        <input id="Title" name="Title" type="text" placeholder="Title" autocomplete="off" autocapitalize="off"
+            spellcheck="false" autofocus>
+        <input id="Store_Name" name="Store_Name" type="text" placeholder="Store Name" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="MRP" name="MRP" type="text" placeholder="MRP" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Selling" name="Selling" type="text" placeholder="Selling" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <textarea placeholder="Description" name="Description" id="Description" with="500px"></textarea>
+        <input id="In_Stock" name="In_Stock" type="text" placeholder="In stock" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <br>
+        <hr>
+        <br>
+        <center>
+            <h3>OFFER SECTION</h3>
+        </center>
+        <input id="Offer1" name="Offer1" type="text" placeholder="Offer1" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Offer2" name="Offer2" type="text" placeholder="Offer2" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Offer3" name="Offer3" type="text" placeholder="Offer3" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Offer4" name="Offer4" type="text" placeholder="Offer4" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <br>
+        <br>
+        <hr>
 
-        <textarea placeholder="Description" name="Description" id="" with="500px"></textarea>
-        
-        
+        <center>
+            <h3>KEY VALUE PAIR</h3>
+        </center>
+        <input id="Key1" name="Key1" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value1" name="Value1" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Offer1" type="text" placeholder="Offer1" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Offer2" type="text" placeholder="Offer2" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Offer3" type="text" placeholder="Offer3" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Offer4" type="text" placeholder="Offer4" autocomplete="off" autocapitalize="off" spellcheck="false">
-        
+        <input id="Key2" name="Key2" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value2" name="Value2" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
+        <input id="Key3" name="Key3" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value3" name="Value3" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
+        <input id="Key4" name="Key4" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value4" name="Value4" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        
-        <input name="Key1" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value1" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key5" name="Key5" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value5" name="Value5" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key2" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value2" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key6" name="Key6" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value6" name="Value6" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key3" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value3" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key7" name="Key7" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value7" name="Value7" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key4" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value4" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key8" name="Key8" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value8" name="Value8" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key5" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value5" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key9" name="Key9" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value9" name="Value9" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key6" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value6" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key10" name="Key10" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value10" name="Value10" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key7" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value7" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key11" name="Key11" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value11" name="Value11" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key8" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value8" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key12" name="Key12" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value12" name="Value12" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key9" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value9" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key13" name="Key13" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value13" name="Value13" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key10" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value10" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key14" name="Key14" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value14" name="Value14" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key11" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value11" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key15" name="Key15" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value15" name="Value15" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key12" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value12" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key16" name="Key16" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value16" name="Value16" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key13" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value13" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key17" name="Key17" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value17" name="Value17" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key14" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value14" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key18" name="Key18" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value18" name="Value18" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key15" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value15" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key19" name="Key19" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value19" name="Value19" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key16" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value16" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key20" name="Key20" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value20" name="Value20" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
         <hr>
-        <input name="Key17" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value17" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <hr>
-        <input name="Key18" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value18" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <hr>
-        <input name="Key19" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value19" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <hr>
-        <input name="Key20" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value20" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <hr>
-        <input name="Key1" type="text" placeholder="Key" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Value1" type="text" placeholder="Value" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <hr>
-        
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <input name="Product_Url1" type="text" placeholder="Product_Url1" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Product_Url2" type="text" placeholder="Product_Url2" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Product_Url3" type="text" placeholder="Product_Url3" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Product_Url4" type="text" placeholder="Product_Url4" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Product_Url5" type="text" placeholder="Product_Url5" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Product_Url6" type="text" placeholder="Product_Url6" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input name="Product_Url7" type="text" placeholder="Product_Url7" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <input id="Key1" name="Key1" type="text" placeholder="Key" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
+        <input id="Value1" name="Value1" type="text" placeholder="Value" autocomplete="off" autocapitalize="off"
+            spellcheck="false">
 
-        <button onclick="T();" type="button">Submit</button>
-        <button type="reset">Reset</button>
+        <hr>
+        <br>
+        <center>
+            <h3>IMAGE SECTION</h3>
+        </center>
+        <input id="Product_Url1" name="Product_Url1" type="text" placeholder="Product_Url1" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="Product_Url2" name="Product_Url2" type="text" placeholder="Product_Url2" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="Product_Url3" name="Product_Url3" type="text" placeholder="Product_Url3" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="Product_Url4" name="Product_Url4" type="text" placeholder="Product_Url4" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="Product_Url5" name="Product_Url5" type="text" placeholder="Product_Url5" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="Product_Url6" name="Product_Url6" type="text" placeholder="Product_Url6" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="Product_Url7" name="Product_Url7" type="text" placeholder="Product_Url7" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+
+        <button onclick="D();" type="button">Submit</button>
+        <button id="RST" type="reset">Reset</button>
     </form>
+    <br>
+    <hr>
+
+
+    <p id="Para"></p>
+    <br>
+    <hr>
+
+    <script>function D() {
+
+            JJS = {};
+
+            const Title = document.getElementById("Title").value;
+            const Store_Name = document.getElementById("Store_Name").value;
+            const MRP = document.getElementById("MRP").value;
+            const Selling = document.getElementById("Selling").value;
+            const Description = document.getElementById("Description").value;
+
+            const In_Stock = document.getElementById("In_Stock").value;
+
+            JJS["Title"] = Title;
+            JJS["Store_Name"] = Store_Name;
+            JJS["MRP"] = MRP;
+            JJS["Selling"] = Selling;
+            JJS["Description"] = Description;
+            JJS["In_Stock"] = In_Stock;
+
+            const Offer_1 = document.getElementById("Offer1").value;
+            const Offer_2 = document.getElementById("Offer2").value;
+            const Offer_3 = document.getElementById("Offer3").value;
+            const Offer_4 = document.getElementById("Offer4").value;
+
+
+            let g = {}
+
+            if (Offer_1) {
+
+                g["Offer_1"] = Offer_1;
+
+            }
+            if (Offer_2) {
+
+                g["Offer_2"] = Offer_2;
+            }
+            if (Offer_3) {
+
+                g["Offer_3"] = Offer_3;
+            }
+
+            if (Offer_4) {
+
+                g["Offer_4"] = Offer_4;
+            }
+
+            JJS["Offer_Details"] = g;
+
+
+
+            let df = {};
+
+
+            const Product_Url1 = document.getElementById("Product_Url1").value;
+            const Product_Url2 = document.getElementById("Product_Url2").value;
+            const Product_Url3 = document.getElementById("Product_Url3").value;
+
+            df["Url1"] = Product_Url1;
+            df["Url2"] = Product_Url2;
+            df["Url3"] = Product_Url3;
+
+
+            const Product_Url4 = document.getElementById("Product_Url4").value;
+            const Product_Url5 = document.getElementById("Product_Url5").value;
+            const Product_Url6 = document.getElementById("Product_Url6").value;
+            const Product_Url7 = document.getElementById("Product_Url7").value;
+
+            if (Product_Url4) {
+                df["Url4"] = Product_Url4;
+            }
+            if (Product_Url5) {
+                df["Url5"] = Product_Url5;
+            }
+            if (Product_Url6) {
+                df["Url6"] = Product_Url6;
+            }
+            if (Product_Url7) {
+                df["Url7"] = Product_Url7;
+            }
+
+            JJS["Product_Img_Url"] = df;
+
+
+
+
+
+            const key1 = document.getElementById("Key1").value;
+            const key2 = document.getElementById("Key2").value;
+            const key3 = document.getElementById("Key3").value;
+            const key4 = document.getElementById("Key4").value;
+            const key5 = document.getElementById("Key5").value;
+            const key6 = document.getElementById("Key6").value;
+            const key7 = document.getElementById("Key7").value;
+            const key8 = document.getElementById("Key8").value;
+            const key9 = document.getElementById("Key9").value;
+            const key10 = document.getElementById("Key10").value;
+            const key11 = document.getElementById("Key11").value;
+            const key12 = document.getElementById("Key12").value;
+            const key13 = document.getElementById("Key13").value;
+            const key14 = document.getElementById("Key14").value;
+            const key15 = document.getElementById("Key15").value;
+            const key16 = document.getElementById("Key16").value;
+            const key17 = document.getElementById("Key17").value;
+            const key18 = document.getElementById("Key18").value;
+            const key19 = document.getElementById("Key19").value;
+            const key20 = document.getElementById("Key20").value;
+
+
+            const Value1 = document.getElementById("Value1").value;
+            const Value2 = document.getElementById("Value2").value;
+            const Value3 = document.getElementById("Value3").value;
+            const Value4 = document.getElementById("Value4").value;
+            const Value5 = document.getElementById("Value5").value;
+            const Value6 = document.getElementById("Value6").value;
+            const Value7 = document.getElementById("Value7").value;
+            const Value8 = document.getElementById("Value8").value;
+            const Value9 = document.getElementById("Value9").value;
+            const Value10 = document.getElementById("Value10").value;
+            const Value11 = document.getElementById("Value11").value;
+            const Value12 = document.getElementById("Value12").value;
+            const Value13 = document.getElementById("Value13").value;
+            const Value14 = document.getElementById("Value14").value;
+            const Value15 = document.getElementById("Value15").value;
+            const Value16 = document.getElementById("Value16").value;
+            const Value17 = document.getElementById("Value17").value;
+            const Value18 = document.getElementById("Value18").value;
+            const Value19 = document.getElementById("Value19").value;
+            const Value20 = document.getElementById("Value20").value;
+
+
+            let TT = {}
+
+            if (key1) {
+                TT["Item_1"] = {
+                    "Key": key1,
+                    "Value": Value1,
+                }
+            }
+            if (key2) {
+                TT["Item_2"] = {
+                    "Key": key2,
+                    "Value": Value2,
+                }
+            }
+            if (key3) {
+                TT["Item_3"] = {
+                    "Key": key3,
+                    "Value": Value3,
+                }
+            }
+            if (key4) {
+                TT["Item_4"] = {
+                    "Key": key4,
+                    "Value": Value4,
+                }
+            }
+            if (key5) {
+                TT["Item_5"] = {
+                    "Key": key5,
+                    "Value": Value5,
+                }
+            }
+            if (key6) {
+                TT["Item_6"] = {
+                    "Key": key6,
+                    "Value": Value6,
+                }
+            }
+            if (key7) {
+                TT["Item_7"] = {
+                    "Key": key7,
+                    "Value": Value7,
+                }
+            }
+            if (key8) {
+                TT["Item_8"] = {
+                    "Key": key8,
+                    "Value": Value8,
+                }
+            }
+            if (key9) {
+                TT["Item_9"] = {
+                    "Key": key9,
+                    "Value": Value9,
+                }
+            }
+            if (key10) {
+                TT["Item_10"] = {
+                    "Key": key10,
+                    "Value": Value10,
+                }
+            }
+            if (key11) {
+                TT["Item_11"] = {
+                    "Key": key11,
+                    "Value": Value11,
+                }
+            }
+            if (key12) {
+                TT["Item_12"] = {
+                    "Key": key12,
+                    "Value": Value12,
+                }
+            }
+            if (key13) {
+                TT["Item_13"] = {
+                    "Key": key13,
+                    "Value": Value13,
+                }
+            }
+            if (key14) {
+                TT["Item_14"] = {
+                    "Key": key14,
+                    "Value": Value14,
+                }
+            }
+            if (key15) {
+                TT["Item_15"] = {
+                    "Key": key15,
+                    "Value": Value15,
+                }
+            }
+            if (key16) {
+                TT["Item_16"] = {
+                    "Key": key16,
+                    "Value": Value16,
+                }
+            }
+            if (key17) {
+                TT["Item_17"] = {
+                    "Key": key17,
+                    "Value": Value17,
+                }
+            }
+            if (key18) {
+                TT["Item_18"] = {
+                    "Key": key18,
+                    "Value": Value18,
+                }
+            }
+            if (key19) {
+                TT["Item_19"] = {
+                    "Key": key19,
+                    "Value": Value19,
+                }
+            }
+            if (key20) {
+                TT["Item_20"] = {
+                    "Key": key20,
+                    "Value": Value20,
+                }
+            }
+
+
+
+
+
+
+            JJS["Product_Key_Value"] = TT;
+
+
+            console.log(JSON.stringify(JJS));
+
+            document.getElementById("Para").innerHTML = JSON.stringify(JJS);
+            document.getElementById("RST").click();
+            return JSON.stringify(JJS)
+        }
+    </script>
+    <script src="./script.js"></script>
 </body>
+
 </html>

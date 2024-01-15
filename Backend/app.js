@@ -1,5 +1,4 @@
 const express = require("express");
-const multer = require("multer");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const fs = require("fs");
@@ -33,15 +32,6 @@ const Pro_Model = mongoose.model("Product_Details", Pro_Schema);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, '../Photos');
-    },
-    filename: (req, file, cb) => {
-        cb(null, a + "_" + file.fieldname + '-' + b + path.extname(file.originalname));
-    }
-});
 
 
 app.get("/", (req, res) => {
