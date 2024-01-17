@@ -226,7 +226,9 @@
     <br>
     <hr>
 
-    <script>function D() {
+    <script>
+        let r;
+        function D() {
 
             JJS = {};
 
@@ -491,10 +493,26 @@
 
             document.getElementById("Para").innerHTML = JSON.stringify(JJS);
             document.getElementById("RST").click();
-            return JSON.stringify(JJS)
+            // r = JSON.stringify(JJS)
+            fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(JJS)
+            })
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                console.log('Response from server:', data);
+            })
+            .catch(error => {
+                console.log(error);
+            });
         }
+
     </script>
-    <script src="./script.js"></script>
 </body>
 
 </html>

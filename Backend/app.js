@@ -1,38 +1,12 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const app = express();
 
-
-mongoose.connect('mongodb://127.0.0.1:27017/Add_Product_Base');
-const db = mongoose.connection;
-db.on('error', (error) => console.error('MongoDB connection error:', error));
-db.once('open', () => console.log('Connected to MongoDB database.'));
-
-
-const Pro_Schema = new mongoose.Schema({
-    Title: String,
-    Store_Name: String,
-    MRP: Number,
-    Selling: Number,
-    Offer_Details: Object,
-    Description: String,
-
-    Product_Img_Url: Object,
-    Product_Key_Value: Object,
-    Rating: Number,
-
-
-});
-const Pro_Model = mongoose.model("Product_Details", Pro_Schema);
-
-
+// const HTML_NEW = require("./Function.js")
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-
 
 app.get("/", (req, res) => {
     fs.readFile("../Files/index.html", 'utf8', (err, dataa) => {
@@ -45,117 +19,54 @@ app.get("/", (req, res) => {
 });
 
 app.post('/', (req, res) => {
-
     let reqBody = req.body;
-    let jsson = {
+    console.log(reqBody);
+    let data = {
         Title: reqBody.Title,
         Store_Name: reqBody.Store_Name,
         MRP: reqBody.MRP,
         Selling: reqBody.Selling,
         Description: reqBody.Description,
+        In_Stock: reqBody.In_Stock,
+        Offer_Details: reqBody.Offer_Details,
+        Product_Img_Url: reqBody.Product_Img_Url,
+        Product_Key_Value: reqBody.Product_Key_Value,
+    };
+    let fg = JSON.stringify(data);
+// __________________________________________________________
+    let Title = data.Title;
+    let Store_Name = data.Store_Name;
+    let MRP = data.MRP;
+    let Selling = data.Selling;
+    let Description = data.Description;
+    let In_Stock = data.In_Stock;
+    let Offer_Details = data.Offer_Details;
+    let Product_Img_Url = data.Product_Img_Url;
+    let Product_Key_Value = data.Product_Key_Value;
 
-        Offer_Details: {
-            Offer_1: reqBody.Offer_1,
-            Offer_2: reqBody.Offer_2,
-            Offer_3: reqBody.Offer_3,
-            Offer_4: reqBody.Offer_4,
-        },
-        Product_Img_Url: {
-            Url1: reqBody.Url1,
-            Url2: reqBody.Url2,
-            Url3: reqBody.Url3,
-            Url4: reqBody.Url4,
-            Url5: reqBody.Url5,
-            Url6: reqBody.Url6,
-            Url7: reqBody.Url7,
-        },
-        Product_Key_Value: {
-            Item_1: {
-                key: reqBody.Item_1.key,
-                value: reqBody.Item_1.value
-            },
-            Item_2: {
-                key: reqBody.Item_2.key,
-                value: reqBody.Item_2.value
-            },
-            Item_3: {
-                key: reqBody.Item_3.key,
-                value: reqBody.Item_3.value
-            },
-            Item_4: {
-                key: reqBody.Item_4.key,
-                value: reqBody.Item_4.value
-            },
-            Item_5: {
-                key: reqBody.Item_5.key,
-                value: reqBody.Item_5.value
-            },
-            Item_6: {
-                key: reqBody.Item_6.key,
-                value: reqBody.Item_6.value
-            },
-            Item_7: {
-                key: reqBody.Item_7.key,
-                value: reqBody.Item_7.value
-            },
-            Item_8: {
-                key: reqBody.Item_8.key,
-                value: reqBody.Item_8.value
-            },
-            Item_9: {
-                key: reqBody.Item_9.key,
-                value: reqBody.Item_9.value
-            },
-            Item_10: {
-                key: reqBody.Item_10.key,
-                value: reqBody.Item_10.value
-            },
-            Item_11: {
-                key: reqBody.Item_11.key,
-                value: reqBody.Item_11.value
-            },
-            Item_12: {
-                key: reqBody.Item_12.key,
-                value: reqBody.Item_12.value
-            },
-            Item_13: {
-                key: reqBody.Item_13.key,
-                value: reqBody.Item_13.value
-            },
-            Item_14: {
-                key: reqBody.Item_14.key,
-                value: reqBody.Item_14.value
-            },
-            Item_15: {
-                key: reqBody.Item_15.key,
-                value: reqBody.Item_15.value
-            },
-            Item_16: {
-                key: reqBody.Item_16.key,
-                value: reqBody.Item_16.value
-            },
-            Item_17: {
-                key: reqBody.Item_17.key,
-                value: reqBody.Item_17.value
-            },
-            Item_18: {
-                key: reqBody.Item_18.key,
-                value: reqBody.Item_18.value
-            },
-            Item_19: {
-                key: reqBody.Item_19.key,
-                value: reqBody.Item_19.value
-            },
-            Item_20: {
-                key: reqBody.Item_20.key,
-                value: reqBody.Item_20.value
-            },
-        },
+    const fileName = `../Created Files/${Title}"@"${MRP}.html`;
 
-    }
-})
+    let htmlContent = "htmlContent";
+
+    fs.writeFile(fileName, htmlContent, (err) => {
+        if (err) {
+            console.error('Error creating HTML file:', err);
+        } else {
+            console.log('HTML file created successfully!');
+        }
+    });
+// __________________________________________________________
 
 
-app.listen(8928, () => {
-    console.log("Server connected to http://192.168.0.44:8928/")
-})
+
+
+
+    fs.appendFile("./g.txt", fg + "\n", 'utf8', (err) => {
+        if (err) {
+            console.error('Error appending to the file:', err);
+            return;
+        }
+    });
+    res.status(200).send(`<h1 style="text-align: center"><a href="/">HOMEs</a></h1>`);
+});
+app.listen(8928, () => console.log("Server connected to http://192.168.0.44:8928/"));
