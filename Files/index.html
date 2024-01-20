@@ -214,6 +214,12 @@
             autocapitalize="off" spellcheck="false">
         <input id="Product_Url7" name="Product_Url7" type="text" placeholder="Product_Url7" autocomplete="off"
             autocapitalize="off" spellcheck="false">
+        <input id="Product_Url8" name="Product_Url8" type="text" placeholder="Product_Url8" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="Product_Url9" name="Product_Url9" type="text" placeholder="Product_Url9" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
+        <input id="Product_Url10" name="Product_Url10" type="text" placeholder="Product_Url10" autocomplete="off"
+            autocapitalize="off" spellcheck="false">
 
         <button onclick="D();" type="button">Submit</button>
         <button id="RST" type="reset">Reset</button>
@@ -236,7 +242,7 @@
             const Store_Name = document.getElementById("Store_Name").value;
             const MRP = document.getElementById("MRP").value;
             const Selling = document.getElementById("Selling").value;
-            const Description = document.getElementById("Description").value;
+            const Description = document.getElementById("Description").value.replace(/\n/g, "<br>");
 
             const In_Stock = document.getElementById("In_Stock").value;
 
@@ -294,6 +300,9 @@
             const Product_Url5 = document.getElementById("Product_Url5").value;
             const Product_Url6 = document.getElementById("Product_Url6").value;
             const Product_Url7 = document.getElementById("Product_Url7").value;
+            const Product_Url8 = document.getElementById("Product_Url8").value;
+            const Product_Url9 = document.getElementById("Product_Url9").value;
+            const Product_Url10 = document.getElementById("Product_Url10").value;
 
             if (Product_Url4) {
                 df["Url4"] = Product_Url4;
@@ -306,6 +315,15 @@
             }
             if (Product_Url7) {
                 df["Url7"] = Product_Url7;
+            }
+            if (Product_Url8) {
+                df["Url8"] = Product_Url8;
+            }
+            if (Product_Url9) {
+                df["Url9"] = Product_Url9;
+            }
+            if (Product_Url10) {
+                df["Url10"] = Product_Url10;
             }
 
             JJS["Product_Img_Url"] = df;
