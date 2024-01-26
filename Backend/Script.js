@@ -154,26 +154,12 @@ function UnHide_Img5() {
     document.getElementById("Product1_longList-B-1").style.display = "none";
     ki()
 }
-Hide_Img5()
+// Hide_Img5()
 // Product_longList_B_2 = 
 // Product_longList_B_3 = 
 // Product_longList_B_4 = 
 // Product_longList_B_5 = 
 
-function tt() {
-    let morebtnn = document.getElementById("morebtnn");
-    let morebtn = document.getElementById("morebtn");
-
-    if (morebtnn.innerHTML == "Down") {
-        UnHide_Img5();
-        morebtnn.innerHTML = "Up";
-    }
-    else if (morebtnn.innerHTML == "Up") {
-        Hide_Img5();
-        morebtnn.innerHTML = "Down";
-        
-    }
-}
 
 
 
@@ -191,12 +177,12 @@ function ki() {
     let Product_longList_B_8 = document.getElementById("Product_longList-B-8");
     let Product_longList_B_9 = document.getElementById("Product_longList-B-9");
     let Product_longList_B_10 = document.getElementById("Product_longList-B-10");
-    if(Product_longList_B_10.getAttribute("src") == ""){
-        console.log(1)
-    }else{
-        console.log(2)
+    // if(Product_longList_B_10.getAttribute("src") == ""){
+    //     console.log(1)
+    // }else{
+    //     console.log(2)
 
-    };
+    // };
     let Product1_longList_B_1 = document.getElementById("Product1_longList-B-1");
     let Product1_longList_B_2 = document.getElementById("Product1_longList-B-2");
     let Product1_longList_B_3 = document.getElementById("Product1_longList-B-3");
@@ -242,7 +228,7 @@ function ki() {
     };
     if (Product_longList_B_9.getAttribute("src") == null || Product_longList_B_9.getAttribute("src") == ""){
         Product1_longList_B_9.style.display = "none";
-        console.log(22)
+        // console.log(22)s
         
     };
     if (Product_longList_B_10.getAttribute("src") == null || Product_longList_B_10.getAttribute("src") == ""){
@@ -251,3 +237,30 @@ function ki() {
     };
 }
 ki();
+function D() {
+    let MENU_W = document.getElementById("MENU_W");
+    MENU_W.addEventListener('click', () => {
+        document.getElementById('Aside').style.animationName = "Slide";
+        document.getElementById('Background_Menu').style.display = "block";
+        // document.getElementById('Social_DIV').style.display = "none";
+
+    });
+    let ENU_W = document.getElementById("MENU_W_DIV");
+    ENU_W.addEventListener('click', () => {
+        document.getElementById('Aside').style.animationName = "Slide1";
+        setTimeout(() => {
+            // document.getElementById('Social_DIV').style.display = "block";
+            document.getElementById('Background_Menu').style.display = "none";
+        }, 500);
+    });
+    let Background_Menu_BG = document.getElementById("Background_Menu_BG");
+    Background_Menu_BG.addEventListener('click', () => {
+        document.getElementById('Aside').style.animationName = "Slide1";
+        setTimeout(() => {
+            // document.getElementById('Social_DIV').style.display = "block";
+            document.getElementById('Background_Menu').style.display = "none";
+        }, 500)
+    });
+};
+
+D();
