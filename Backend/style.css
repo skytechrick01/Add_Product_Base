@@ -320,6 +320,7 @@ body{
 .Order_Offer p {
     /* overflow: hidden; */
     margin: 10px 0px 10px 0px;
+    
 }
 
 .Order_Offer p:last-child {
@@ -593,7 +594,7 @@ body{
     margin-top: 3px;
     padding-left: 16px;
     padding-right: 16px;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 #Key_V {

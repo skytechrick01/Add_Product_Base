@@ -3,6 +3,36 @@ const bodyParser = require("body-parser");
 const fs = require("fs");
 const app = express();
 
+const mongoose = require("mongoose");
+mongoose.connect('mongodb://127.0.0.1:27017/Add_Product_Base');
+
+const db = mongoose.connection;
+db.on('error',(error) => {
+    console.error('MongoDB connection error:', error);
+});
+db.once('open',() => {
+    console.log('Connected to MongoDB database.');
+});
+
+const Signup_Schema = new mongoose.Schema(
+    {
+        Title:     String,
+        Store_Name:String,
+        MRP:       String,
+        Selling:   String,
+        Description: String,
+        In_Stock:  String,
+        Offer_Details: Object,
+        Product_Img_Url: Object,
+        Product_Key_Value: Object,
+        Rating_Reviews: Object
+      }
+    
+);
+
+const Product_Model = mongoose.model("product_details", Signup_Schema);
+
+
 // const HTML_NEW = require("./Function.js")
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,6 +49,9 @@ app.get("/", (req, res) => {
 });
 
 app.post('/', (req, res) => {
+    let Rating_Reviews1 = {
+        "User1": "Good product",
+    }
     let reqBody = req.body;
     console.log(reqBody);
     let data = {
@@ -31,7 +64,9 @@ app.post('/', (req, res) => {
         Offer_Details: reqBody.Offer_Details,
         Product_Img_Url: reqBody.Product_Img_Url,
         Product_Key_Value: reqBody.Product_Key_Value,
+        Rating_Reviews: Rating_Reviews1
     };
+    console.log(data);
     let fg = JSON.stringify(data);
 // __________________________________________________________
     let Title = data.Title;
@@ -44,15 +79,23 @@ app.post('/', (req, res) => {
     let Product_Img_Url = data.Product_Img_Url;
     let Product_Key_Value = data.Product_Key_Value;
 
-    const fileName = `../Created Files/${Title}"@"${MRP}.html`;
+    let htmlContent = "<h1>htmlContent</h1>";
 
-    let htmlContent = "htmlContent";
 
-    fs.writeFile(fileName, htmlContent, (err) => {
+
+
+
+
+
+    fs.writeFile("../Created_Files/index.html" , htmlContent, (err) => {
         if (err) {
             console.error('Error creating HTML file:', err);
         } else {
             console.log('HTML file created successfully!');
+            const p = new Product_Model(data);
+            p.save().then(()=>{
+                console.log("Save to database successfully")
+            })
         }
     });
 // __________________________________________________________
@@ -67,6 +110,6 @@ app.post('/', (req, res) => {
             return;
         }
     });
-    res.status(200).send(`<h1 style="text-align: center"><a href="/">HOMEs</a></h1>`);
+
 });
 app.listen(8928, () => console.log("Server connected to http://192.168.0.44:8928/"));
