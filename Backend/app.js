@@ -243,7 +243,7 @@ Percentage_Off(${new String(Selling1)}, ${new String(MRP1)})
     setTimeout(() => {
         
         
-        fs.writeFile("../Created_Files/index.html" , htmlContent, (err) => {
+        fs.writeFile("../Created_Files/index.txt" , htmlContent, (err) => {
             if (err) {
                 console.error('Error creating HTML file:', err);
             } else {
